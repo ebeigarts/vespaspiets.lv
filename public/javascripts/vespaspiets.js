@@ -14,4 +14,17 @@ $(function() {
     event.preventDefault();
     $($(this).attr("href")).ScrollTo({ duration: 800 });
   });
+
+  // Active section
+  $(window).scroll(function() {
+    $("#nav a").each(function() {
+      var $target = $($(this).attr("href"));
+      var scrollTop = $(document.body).scrollTop();
+      var sectionTop = $target.offset().top;
+      if (scrollTop >= sectionTop) {
+        $("#nav li").removeClass("active");
+        $(this).closest("li").addClass("active");
+      }
+    });
+  });
 });
