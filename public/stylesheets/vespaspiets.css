@@ -153,14 +153,29 @@ body {
   padding: 10px 20px;
   font-size: 40px;
   color: #fff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 }
 
 .album {
-  padding: 10px;
-  margin: 0 5px 3px 0;
-  background: rgba(255,255,255,0.6);
+  border: 10px solid #fff;
+  background: #fff;
+  margin: 0 0px 10px 0;
   display: inline-block;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
+.album h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px 0 0 0;
+  font-size: 12px;
+}
+.album:nth-child(2) { -webkit-transform: rotate(-14deg); }
+.album:nth-child(3) { -webkit-transform: rotate(7deg); }
+.album:nth-child(4) { -webkit-transform: rotate(-4deg); }
+.album:nth-child(6) { -webkit-transform: rotate(2deg); }
+.album:nth-child(7) { -webkit-transform: rotate(-14deg); }
+.album:nth-child(8) { -webkit-transform: rotate(7deg); }
 .album img {
   display: block;
 }
