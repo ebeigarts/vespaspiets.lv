@@ -23,11 +23,12 @@ body {
 
 #header {
   position: fixed;
+  z-index: 10;
   height: 40px;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 10;
   background: rgba(0,0,0,0.85);
 }
 
@@ -101,7 +102,7 @@ body {
   position: relative;
 }
 #flying_vespa {
-  z-index: 9999;
+  z-index: 5;
   position: absolute;
   bottom: -15px;
   width: 100%;
