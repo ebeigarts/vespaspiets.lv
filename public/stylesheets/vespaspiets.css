@@ -97,9 +97,18 @@ body {
   background-attachment: fixed;
   background-position: 50% 0;
   background-repeat: no-repeat;
-  padding: 50px 0;
-  height: 1020px;
+  padding: 0;
+  height: 1120px;
   position: relative;
+  overflow: hidden;
+}
+#news_chuvaak {
+  background: url(../images/news_chuvaak.png) no-repeat 0 -400px;
+  width: 303px;
+  height: 1120px;
+  position: absolute;
+  right: 0;
+  top: 0px;
 }
 #flying_vespa {
   z-index: 5;
@@ -120,7 +129,8 @@ body {
   width: 560px;
   padding: 10px 20px;
   background: rgba(255,255,255,0.6);
-  margin-top: 20px;
+  margin-top: 70px;
+  min-height: 1000px;
 }
 
 .article h3 {
@@ -139,6 +149,7 @@ body {
 
 #albums h1 {
   font-weight: normal;
+  margin-top: 60px;
   padding: 10px 20px;
   font-size: 40px;
   color: #fff;
