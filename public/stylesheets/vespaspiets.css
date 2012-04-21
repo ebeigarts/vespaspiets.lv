@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-#nav, h1, h2, h3 {
+#nav, h1, h2, h3, .video_title {
   font-family: "Museo Sans", sans-serif;
   color: #000;
 }
@@ -229,13 +229,25 @@ h1 {
   padding: 5px;
 }
 .video {
-  padding: 5px;
   float: left;
-  width: 103px;
+  width: 104px;
   color: #fff;
-  font-size: 12px;
-  background: #000;
-  height: 140px;
+  padding: 5px;
+  min-height: 170px;
+}
+.video_title {
+  display: block;
+  font-size: 11px;
+  padding: 0px 5px 3px 5px;
+  color: #eee;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.6);
+}
+.video:hover img {
+  opacity: 0.6;
+}
+.video:hover .video_title {
+  color: #999;
 }
 .video img {
   display: block;
