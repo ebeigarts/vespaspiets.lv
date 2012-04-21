@@ -31,6 +31,9 @@ $(function() {
     });
   });
 
+  // YouTube Videos
+  var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&orderby=published&callback=?';
+
   $("[data-video-id]").live("click", function() {
     var videoID = $(this).data("video-id");
     var embedURL= "http://www.youtube.com/embed/"+ videoID +"?wmode=transparent";
@@ -40,9 +43,6 @@ $(function() {
         "' frameborder='0' allowfullscreen></iframe>"
     );
   });
-
-  // YouTube Videos
-  var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&orderby=published&callback=?';
   $.getJSON(videoUploadsURL, function(data) {
     var items = data.feed.entry;
     $.each(data.feed.entry, function(i, item) {
@@ -61,5 +61,32 @@ $(function() {
       );
     });
     $("[data-video-id]:first").click();
+  });
+
+  // Facebook photo albums
+  var facebookAlbumsURL = "http://graph.facebook.com/107178829336751/albums?callback=?";
+  $.getJSON(facebookAlbumsURL, function(data) {
+    $.each(data.data, function(i, album) {
+      var facebookPhotosUrl = "http://graph.facebook.com/" + album.id + "/photos?callback=?";
+      $.getJSON(facebookPhotosUrl, function(data) {
+        if (album.name != "Cover Photos" &&
+            album.name != "Profile Pictures" &&
+            album.name != "Wall Photos" &&
+            data.data.length > 1) {
+          $.each(data.data, function(i, photo) {
+            if (photo.id == album.cover_photo) {
+              $("#albums_container").append(
+                "<div class='album'>" +
+                  "<a href='"+ album.link +"' target='_blank'>" +
+                    "<img src='"+ photo.picture +"' />" +
+                    "<span class='album_title''>"+ album.name +"</span>" +
+                  "</a>" +
+                "</div>"
+              );
+            }
+          });
+        }
+      });
+    });
   });
 });

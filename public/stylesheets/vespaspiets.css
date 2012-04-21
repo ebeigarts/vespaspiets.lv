@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-#nav, h1, h2, h3, .video_title {
+#nav, h1, h2, h3, .album_title, .video_title {
   font-family: "Museo Sans", sans-serif;
   color: #000;
 }
@@ -133,12 +133,12 @@ body {
 }
 
 #vespa_lxv {
-  background: url(../images/vespa_lxv.png) no-repeat 50% 550px fixed;
-  width: 1180px;
-  height: 1120px;
+  background: url(../images/vespa_lxv.png) no-repeat 50% 0 fixed;
+  height: 600px;
   position: absolute;
-  right: -150px;
-  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 #flying_vespa {
@@ -194,26 +194,37 @@ h1 {
   text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 }
 
+
+#albums_container {
+  width: 560px;
+}
 .album {
-  border: 10px solid #fff;
+  display: inline-block;
+}
+.album a {
+  text-decoration: none;
+  display: inline-block;
   background: #fff;
   margin: 0 0px 10px 0;
-  display: inline-block;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  padding: 10px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.7);
 }
-.album h3 {
+.album a:hover {
+  background: rgba(255,255,255,0.9);
+}
+.album_title {
   font-weight: normal;
   text-transform: uppercase;
   margin: 0;
   padding: 10px 0 0 0;
-  font-size: 12px;
+  font-size: 11px;
 }
 .album:nth-child(2) { -webkit-transform: rotate(-14deg); }
 .album:nth-child(3) { -webkit-transform: rotate(7deg); }
 .album:nth-child(4) { -webkit-transform: rotate(-4deg); }
-.album:nth-child(6) { -webkit-transform: rotate(2deg); }
-.album:nth-child(7) { -webkit-transform: rotate(-14deg); }
-.album:nth-child(8) { -webkit-transform: rotate(7deg); }
+.album:nth-child(5) { -webkit-transform: rotate(2deg); }
+.album:nth-child(6) { -webkit-transform: rotate(-14deg); }
+.album:nth-child(7) { -webkit-transform: rotate(7deg); }
 .album img {
   display: block;
 }
