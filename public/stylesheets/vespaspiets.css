@@ -103,13 +103,41 @@ body {
   overflow: hidden;
 }
 #news_chuvaak {
-  background: url(../images/news_chuvaak.png) no-repeat 0 -400px;
-  width: 303px;
+  background: url(../images/news_chuvaak.png) no-repeat -60px -400px;
+  width: 300px;
   height: 1120px;
   position: absolute;
   right: 0;
   top: 0px;
 }
+
+#video_chuvaak {
+  background: url(../images/video_chuvaak.png) no-repeat 0 450px;
+  width: 350px;
+  height: 1120px;
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+
+#albums_chuvaak {
+  background: url(../images/albums_chuvaak.png) no-repeat 0px -400px;
+  width: 300px;
+  height: 1120px;
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+
+#vespa_lxv {
+  background: url(../images/vespa_lxv.png) no-repeat 0px 1600px;
+  width: 1180px;
+  height: 1120px;
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+
 #flying_vespa {
   z-index: 5;
   position: absolute;
@@ -122,6 +150,12 @@ body {
   background-image: url(../images/bg.jpg);
 }
 #albums {
+  background-image: url(../images/bg2.jpg);
+}
+#video {
+  background-image: url(../images/video_bg.jpg);
+}
+#about {
   background-image: url(../images/bg2.jpg);
 }
 
@@ -147,7 +181,7 @@ body {
   font-size: 80%;
 }
 
-#albums h1 {
+h1 {
   font-weight: normal;
   margin-top: 60px;
   padding: 10px 20px;
@@ -178,4 +212,19 @@ body {
 .album:nth-child(8) { -webkit-transform: rotate(7deg); }
 .album img {
   display: block;
+}
+
+.video_container {
+  background: rgba(0,0,0,0.6);
+  min-height: 1000px;
+  width: 580px;
+  overflow: hidden;
+}
+.video {
+  padding: 10px 0 0 10px;
+  float: left;
+}
+.video img {
+  display: block;
+  
 }
