@@ -106,7 +106,7 @@ body {
   overflow: hidden;
 }
 #news_chuvaak {
-  background: url(../images/news_chuvaak.png) no-repeat -60px -400px;
+  background: url(../images/news_chuvaak.png) no-repeat 50% 1000px fixed;
   width: 300px;
   height: 1120px;
   position: absolute;
@@ -115,7 +115,7 @@ body {
 }
 
 #video_chuvaak {
-  background: url(../images/video_chuvaak.png) no-repeat 0 450px;
+  background: url(../images/video_chuvaak.png) no-repeat 50% 150px fixed;
   width: 350px;
   height: 1120px;
   position: absolute;
@@ -133,7 +133,7 @@ body {
 }
 
 #vespa_lxv {
-  background: url(../images/vespa_lxv.png) no-repeat 0px 1600px;
+  background: url(../images/vespa_lxv.png) no-repeat 50% 550px fixed;
   width: 1180px;
   height: 1120px;
   position: absolute;
@@ -150,18 +150,17 @@ body {
   background: url(../images/vespa.png) no-repeat 0 0;
 }
 #news {
-  background-image: url(../images/bg.jpg);
+  background-image: url(../images/news_bg.jpg);
 }
 #albums {
-/*  background-image: url(../images/bg2.jpg);*/
-  background-image: url(../images/4_18.JPG);
+  background-image: url(../images/albums_bg.jpg);
 }
 #video {
   background-color: #000;
   background-image: url(../images/video_bg.jpg);
 }
 #about {
-  background-image: url(../images/bg2.jpg);
+  background-image: url(../images/about_bg.jpg);
 }
 
 .article {

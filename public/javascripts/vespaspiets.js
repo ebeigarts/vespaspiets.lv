@@ -6,7 +6,8 @@ $(function() {
   });
 
   $(window).scroll(function() {
-    var offset = ($(document.body).scrollTop() - 1230) * 1.5;
+    var top = $(document.body).scrollTop();
+    var offset = (top - 1230) * 1.5;
     $("#flying_vespa").css("background-position", offset + 13 + "px 0");
   });
 
