@@ -24,6 +24,8 @@ $(function() {
       if (scrollTop >= sectionTop) {
         $("#nav li").removeClass("active");
         $(this).closest("li").addClass("active");
+        $(".page").removeClass("active");
+        $target.addClass("active");
       }
     });
   });
