@@ -213,18 +213,20 @@ h1 {
   background: rgba(255,255,255,0.9);
 }
 .album_title {
+  display: block;
+  width: 90px;
   font-weight: normal;
   text-transform: uppercase;
   margin: 0;
   padding: 10px 0 0 0;
   font-size: 11px;
 }
-.album:nth-child(2) { -webkit-transform: rotate(-14deg); }
-.album:nth-child(3) { -webkit-transform: rotate(7deg); }
-.album:nth-child(4) { -webkit-transform: rotate(-4deg); }
-.album:nth-child(5) { -webkit-transform: rotate(2deg); }
-.album:nth-child(6) { -webkit-transform: rotate(-14deg); }
-.album:nth-child(7) { -webkit-transform: rotate(7deg); }
+.album:nth-child(1) { -webkit-transform: rotate(-14deg); }
+.album:nth-child(2) { -webkit-transform: rotate(7deg); }
+.album:nth-child(3) { -webkit-transform: rotate(-4deg); }
+.album:nth-child(4) { -webkit-transform: rotate(2deg); }
+.album:nth-child(5) { -webkit-transform: rotate(-14deg); }
+.album:nth-child(6) { -webkit-transform: rotate(7deg); }
 .album img {
   display: block;
 }

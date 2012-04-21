@@ -68,11 +68,11 @@ $(function() {
   $.getJSON(facebookAlbumsURL, function(data) {
     $.each(data.data, function(i, album) {
       var facebookPhotosUrl = "http://graph.facebook.com/" + album.id + "/photos?callback=?";
-      $.getJSON(facebookPhotosUrl, function(data) {
-        if (album.name != "Cover Photos" &&
-            album.name != "Profile Pictures" &&
-            album.name != "Wall Photos" &&
-            data.data.length > 1) {
+      if (album.name != "Cover Photos" &&
+          album.name != "Profile Pictures" &&
+          album.name != "Wall Photos")
+      {
+        $.getJSON(facebookPhotosUrl, function(data) {
           $.each(data.data, function(i, photo) {
             if (photo.id == album.cover_photo) {
               $("#albums_container").append(
@@ -85,8 +85,8 @@ $(function() {
               );
             }
           });
-        }
-      });
+        });
+      }
     });
   });
 });
