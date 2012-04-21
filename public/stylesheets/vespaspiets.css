@@ -218,15 +218,24 @@ h1 {
   display: block;
 }
 
-.video_container {
+#video_container {
   background: rgba(0,0,0,0.6);
   min-height: 1000px;
-  width: 580px;
+  width: 570px;
   overflow: hidden;
+  padding: 5px;
+}
+#video_playing {
+  padding: 5px;
 }
 .video {
-  padding: 10px 0 0 10px;
+  padding: 5px;
   float: left;
+  width: 103px;
+  color: #fff;
+  font-size: 12px;
+  background: #000;
+  height: 140px;
 }
 .video img {
   display: block;
