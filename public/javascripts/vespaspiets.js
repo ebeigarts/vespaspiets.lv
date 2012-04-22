@@ -1,7 +1,7 @@
 $(function() {
   // Stellar doesn't work with IE
   if (!$.browser.msie) {
-    $(document.body).stellar({
+    $.stellar({
       horizontalScrolling: false,
       verticalOffset: 0,
       horizontalOffset: 0
