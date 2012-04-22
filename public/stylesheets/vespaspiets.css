@@ -39,6 +39,7 @@ h1 {
   right: 0;
   z-index: 10;
   background: rgba(0,0,0,0.85);
+  *background: #000;
 }
 
 .logo {
@@ -71,7 +72,7 @@ h1 {
 #header #nav ul li {
   margin: 0;
   display: block;
-  float :left;
+  float: left;
   padding: 10px 20px;
 }
 
@@ -181,7 +182,7 @@ h1 {
   width: 560px;
   padding: 10px 20px;
   background: rgba(255,255,255,0.6);
-  min-height: 1000px;
+   min-height: 1000px;
 }
 
 .article h3 {
