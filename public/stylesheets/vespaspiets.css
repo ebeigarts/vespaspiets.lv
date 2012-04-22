@@ -38,8 +38,8 @@ h1 {
   left: 0;
   right: 0;
   z-index: 10;
+  background: #000;
   background: rgba(0,0,0,0.85);
-  *background: #000;
 }
 
 .logo {
