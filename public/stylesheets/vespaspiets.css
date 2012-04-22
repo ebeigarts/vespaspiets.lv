@@ -15,6 +15,15 @@ body {
   color: #000;
 }
 
+h1 {
+  font-weight: normal;
+  margin-top: 70px;
+  padding: 10px 20px;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+}
+
 .container {
   width: 960px;
   position: relative;
@@ -35,7 +44,7 @@ body {
 .logo {
   width: 194px;
   height: 1130px;
-  background: no-repeat 50% 100px fixed;
+  background: no-repeat 50% 90px fixed;
   position: absolute;
   top: -70px;
   right: 50px;
@@ -105,6 +114,11 @@ body {
   position: relative;
   overflow: hidden;
 }
+#news h1 {
+  color: #000;
+  text-shadow: none;
+}
+
 #news_chuvaak {
   background: url(../images/news_chuvaak.png) no-repeat 50% 1000px fixed;
   width: 350px;
@@ -133,7 +147,7 @@ body {
 }
 
 #vespa_lxv {
-  background: url(../images/vespa_lxv.png) no-repeat 50% 0 fixed;
+  background: url(../images/vespa_lxv.png) no-repeat 50% 100px fixed;
   height: 600px;
   position: absolute;
   left: 0;
@@ -167,7 +181,6 @@ body {
   width: 560px;
   padding: 10px 20px;
   background: rgba(255,255,255,0.6);
-  margin-top: 70px;
   min-height: 1000px;
 }
 
@@ -184,16 +197,6 @@ body {
   color: #777;
   font-size: 80%;
 }
-
-h1 {
-  font-weight: normal;
-  margin-top: 60px;
-  padding: 10px 20px;
-  font-size: 40px;
-  color: #fff;
-  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
-}
-
 
 #albums_container {
   width: 560px;
