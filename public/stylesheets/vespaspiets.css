@@ -128,8 +128,8 @@ h1 {
 #tweets {
   position: absolute;
   top: 163px;
-  right: 0;
-  width: 300px;
+  right: 50px;
+  width: 250px;
   -webkit-transition: all 0.3s ease-out;
 }
 #tweets:before {
@@ -149,6 +149,7 @@ h1 {
   border-radius: 4px;
   margin-bottom: -1px;
   overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
 #tweets li {
   padding: 10px;
@@ -156,17 +157,12 @@ h1 {
   overflow: hidden;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-#tweets .tweet_avatar {
-  float: left;
-}
 #tweets .tweet_time {
   display: none;
 }
 #tweets .tweet_text {
-  float: left;
-  margin-left: 10px;
-  width: 220px;
   font-size: 13px;
+  display: block;
 }
 
 #news_chuvaak {

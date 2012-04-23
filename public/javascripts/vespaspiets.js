@@ -44,8 +44,8 @@ $(function() {
   $("#tweets").tweet({
     username: "vespaspiets",
     join_text: "",
-    avatar_size: 48,
-    count: 3,
+    avatar: false,
+    count: 2,
     loading_text: "loading tweets..."
   });
 
