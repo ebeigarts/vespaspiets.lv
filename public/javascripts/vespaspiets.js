@@ -76,18 +76,21 @@ $(function() {
           album.name != "Wall Photos")
       {
         $.getJSON(facebookPhotosUrl, function(data) {
-          $.each(data.data, function(i, photo) {
-            if (photo.id == album.cover_photo) {
-              $("#albums_container").append(
-                "<div class='album'>" +
-                  "<a href='"+ album.link +"' target='_blank'>" +
-                    "<img src='"+ photo.picture +"' />" +
-                    "<span class='album_title''>"+ album.name +"</span>" +
-                  "</a>" +
-                "</div>"
-              );
-            }
-          });
+          if (data.data.length > 1) {
+            $.each(data.data, function(i, photo) {
+              // if (photo.id == album.cover_photo) {
+              if (i == 0) {
+                $("#albums_container").append(
+                  "<div class='album'>" +
+                    "<a href='"+ album.link +"' target='_blank'>" +
+                      "<img src='"+ photo.picture +"' />" +
+                      "<span class='album_title''>"+ album.name +"</span>" +
+                    "</a>" +
+                  "</div>"
+                );
+              }
+            });
+          }
         });
       }
     });

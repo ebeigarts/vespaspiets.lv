@@ -115,10 +115,6 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-#news h1 {
-  color: #000;
-  text-shadow: none;
-}
 
 #news_chuvaak {
   background: url(../images/news_chuvaak.png) no-repeat 50% 1000px fixed;
@@ -181,8 +177,9 @@ h1 {
 .article {
   width: 560px;
   padding: 10px 20px;
-  background: rgba(255,255,255,0.6);
-   min-height: 1000px;
+  background: #f8f8f8 url(../images/noise.png);
+  min-height: 1000px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
 }
 
 .article h3 {
@@ -197,6 +194,8 @@ h1 {
 .article p.date {
   color: #777;
   font-size: 80%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
 }
 
 #albums_container {
