@@ -16,7 +16,13 @@ $(function() {
 
   $("#nav a").click(function(event) {
     event.preventDefault();
-    $($(this).attr("href")).ScrollTo({ duration: 800 });
+    var href = $(this).attr("href");
+    $(href).ScrollTo({
+      duration: 800,
+      callback: function() {
+        window.location = href;
+      }
+    });
   });
 
   // Active section
