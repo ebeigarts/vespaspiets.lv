@@ -125,8 +125,52 @@ h1 {
   overflow: hidden;
 }
 
+#tweets {
+  position: absolute;
+  top: 163px;
+  right: 0;
+  width: 300px;
+  -webkit-transition: all 0.3s ease-out;
+}
+#tweets:before {
+  content: "";
+  display: block;
+  border: 15px solid;
+  border-color: transparent transparent rgba(255,255,255,0.9) transparent;
+  width: 0;
+  height: 0;
+  margin-left: 190px;
+}
+#tweets ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(255,255,255,0.9);
+  border-radius: 4px;
+  margin-bottom: -1px;
+  overflow: hidden;
+}
+#tweets li {
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#tweets .tweet_avatar {
+  float: left;
+}
+#tweets .tweet_time {
+  display: none;
+}
+#tweets .tweet_text {
+  float: left;
+  margin-left: 10px;
+  width: 220px;
+  font-size: 13px;
+}
+
 #news_chuvaak {
-  background: url(../images/news_chuvaak.png) no-repeat 50% 1000px fixed;
+  background: url(../images/news_chuvaak.png) no-repeat 50% 1100px fixed;
   width: 350px;
   height: 1120px;
   position: absolute;

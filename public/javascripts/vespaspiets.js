@@ -34,6 +34,15 @@ $(function() {
     });
   });
 
+  // Twitter
+  $("#tweets").tweet({
+    username: "vespaspiets",
+    join_text: "",
+    avatar_size: 48,
+    count: 3,
+    loading_text: "loading tweets..."
+  });
+
   // YouTube Videos
   var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&orderby=published&callback=?';
 
