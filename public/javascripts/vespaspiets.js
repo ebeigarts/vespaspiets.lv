@@ -15,20 +15,23 @@ $(function() {
   });
 
   $("#nav a").click(function(event) {
-    event.preventDefault();
     var href = $(this).attr("href");
-    $(href).ScrollTo({
-      duration: 800,
-      callback: function() {
-        window.location = href;
-      }
-    });
+    if (href.indexOf("#") == 0) {
+      event.preventDefault();
+      $(href).ScrollTo({
+        duration: 800,
+        callback: function() {
+          window.location = href;
+        }
+      });
+    }
   });
 
   // Active section
   $(window).scroll(function() {
     $("#nav a").each(function() {
-      var $target = $($(this).attr("href"));
+      var href = $(this).attr("href");
+      var $target = $(href);
       var scrollTop = $(document.body).scrollTop();
       var sectionTop = $target.offset().top;
       if (scrollTop >= sectionTop) {
