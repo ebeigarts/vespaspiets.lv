@@ -24,6 +24,11 @@ body {
   color: #000;
 }
 
+a {
+  color: #AE1922;
+  text-decoration: none;
+}
+
 h1 {
   font-weight: normal;
   margin-top: 70px;
@@ -130,12 +135,12 @@ h1 {
   top: 163px;
   right: 50px;
   width: 250px;
-  -webkit-transition: all 0.3s ease-out;
+  z-index: 20;
 }
 #tweets:before {
   content: "";
   display: block;
-  border: 15px solid;
+  border: 8px solid;
   border-color: transparent transparent rgba(255,255,255,0.9) transparent;
   width: 0;
   height: 0;
@@ -144,8 +149,8 @@ h1 {
 #tweets ul {
   list-style: none;
   margin: 0;
-  padding: 0;
-  background: rgba(255,255,255,0.9);
+  padding: 0 0 30px 0;
+  background: rgba(255,255,255,0.9) url(../images/twitter.png) no-repeat 96% 96%;
   border-radius: 4px;
   margin-bottom: -1px;
   overflow: hidden;
@@ -202,7 +207,7 @@ h1 {
 }
 
 #flying_vespa {
-  z-index: 5;
+  z-index: 25;
   position: absolute;
   bottom: -15px;
   width: 100%;
@@ -223,12 +228,29 @@ h1 {
   background-image: url(../images/about_bg.jpg);
 }
 
-.article {
+::-webkit-scrollbar { width:6px;height:6px; }
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment { display:block;height:0;background-color:transparent; }
+::-webkit-scrollbar-track-piece { background-color:#e4e4e4;-webkit-border-radius:0; }
+::-webkit-scrollbar-thumb:vertical { height:50px;background-color:#999;-webkit-border-radius:8px; }
+::-webkit-scrollbar-thumb:horizontal { width:50px;background-color:#999;-webkit-border-radius:8px; }
+
+
+#news_articles_container {
   width: 560px;
-  padding: 10px 20px;
+  padding: 10px 10px 10px 20px;
   background: #f8f8f8 url(../images/noise.png);
-  min-height: 1000px;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+}
+#news_articles {
+  overflow-y: scroll;
+  height: 560px;
+  padding-right: 10px;
+}
+
+.article_header {
+  border-bottom: 1px solid #ccc;
+  background: url(../images/news_title.png) 100% 100% no-repeat;
 }
 
 .article h3 {
@@ -243,8 +265,6 @@ h1 {
 .article p.date {
   color: #777;
   font-size: 80%;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ccc;
 }
 
 #albums_container {
