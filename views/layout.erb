@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link href="stylesheets/vespaspiets.css" media="screen" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="javascripts/jquery.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.scrollto.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.tweet.js"></script>
+  <script type="text/javascript" src="javascripts/stellar.js"></script>
+  <script type="text/javascript" src="javascripts/vespaspiets.js"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <div id="nav">
+        <ul>
+          <li class="active">
+            <a href="#news">
+              <span class="inactive">Jaunumi</span>
+              <span class="active">Jaunumi</span>
+            </a>
+          </li>
+          <li>
+            <a href="#albums">
+              <span class="inactive">Bildes</span>
+              <span class="active">Bildes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#video">
+              <span class="inactive">Video</span>
+              <span class="active">Video</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <span class="inactive">VespaSpiets</span>
+              <span class="active">VespaSpiets</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li class="social_facebook">
+            <a href="http://www.facebook.com/pages/Vespa-spiets/107178829336751" target="_blank">
+              <span class="inactive">Facebook</span>
+              <span class="active">Facebook</span>
+            </a>
+          </li>
+          <li class="social_draugiem">
+            <a href="http://www.draugiem.lv/vespaspiets" target="_blank">
+              <span class="inactive">draugiem.lv</span>
+              <span class="active">draugiem.lv</span>
+            </a>
+          </li>
+          <li class="social_twitter">
+            <a href="https://twitter.com/#!/vespaspiets" target="_blank">
+              <span class="inactive">Twitter</span>
+              <span class="active">Twitter</span>
+            </a>
+          </li>
+          <li class="social_youtube">
+            <a href="http://www.youtube.com/user/Vespaspiets" target="_blank">
+              <span class="inactive">YouTube</span>
+              <span class="active">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="page_container">
+    <%= yield %>
+  </div>
+</body>
+</html>

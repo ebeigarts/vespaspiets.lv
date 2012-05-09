@@ -1,0 +1,85 @@
+<div id="news" class="page" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="logo logo_black">
+      VespaSpiets
+    </div>
+    <h1>
+      Jaunumi
+    </h1>
+    <div id="news_articles_container">
+    <div id="news_articles">
+      <% @feed.each do |entry| %>
+        <% title, *message_paragraphs = entry["message"].split("\n") %>
+        <% message_paragraphs = message_paragraphs.select { |p| p.strip != "" } %>
+        <% created_time = Time.parse(entry["created_time"]) %>
+        <div class="article">
+          <div class="date">
+            <span class="day"><%= created_time.day %></span>
+            <span class="month"><%= created_time.strftime("%b") %></span>
+          </div>
+          <% if entry["picture"] %>
+            <img src="<%= entry["picture"] %>" style="float: right" />
+          <% end %>
+          <h3>
+            <a href="<%= entry["link"] %>">
+              <%= title %>
+              <span class="more">...</span>
+            </a>
+          </h3>
+        </div>
+      <% end %>
+      <a href="http://www.facebook.com/pages/Vespa-spiets/107178829336751" class="more_more">
+        ...
+      </a>
+    </div>
+    </div>
+    <!-- <div id="tweets" data-stellar-ratio="0">
+    </div> -->
+    <div id="news_chuvaak" data-stellar-background-ratio="0.35">
+    </div>
+  </div>
+  <div id="flying_vespa">
+  </div>
+</div>
+<div id="albums" class="page" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="logo logo_white">
+      VespaSpiets
+    </div>
+    <h1>
+      Bildes
+    </h1>
+    <div id="albums_container">
+    </div>
+    <div id="albums_chuvaak" data-stellar-background-ratio="0.35">
+    </div>
+  </div>
+  <div id="vespa_lxv" data-stellar-background-ratio="1.5">
+  </div>
+</div>
+<div id="video" class="page" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="logo logo_white">
+      VespaSpiets
+    </div>
+    <h1>Video</h1>
+    <div id="video_container">
+      <div id="video_playing">
+      </div>
+    </div>
+    <div id="video_chuvaak" data-stellar-background-ratio="1.5">
+    </div>
+  </div>
+  <div id="reverse_flying_vespa">
+  </div>
+</div>
+<div id="about" class="page" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="logo logo_black">
+      VespaSpiets
+    </div>
+    <h1>
+      VespaSpiets
+    </h1>
+  </div>
+</div>
