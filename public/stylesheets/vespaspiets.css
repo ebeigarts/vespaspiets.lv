@@ -292,10 +292,15 @@ ul.social {
   background: #f8f8f8 url(../images/noise.png);
   box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
   border-radius: 4px;
-  margin: 0px 10px 20px 100px;
+  margin: 0px 0 20px 0;
   position: relative;
   display: inline-block;
   width: 510px;
+}
+
+#news_articles .article {
+  margin-left: 80px;
+  margin-right: 10px;
 }
 
 .article .clear {
