@@ -164,7 +164,7 @@ ul.social {
 
 #tweets {
   position: absolute;
-  top: 163px;
+  top: 160px;
   right: 50px;
   width: 250px;
   z-index: 20;
@@ -221,7 +221,15 @@ ul.social {
 }
 
 #albums_chuvaak {
-/*  background: url(../images/albums_chuvaak.png) no-repeat 0px -400px;*/
+  width: 300px;
+  height: 1120px;
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+
+#about_chuvaak {
+  background: url(../images/about_chuvaak.png) no-repeat 50% 100% fixed;
   width: 300px;
   height: 1120px;
   position: absolute;
@@ -244,7 +252,16 @@ ul.social {
   bottom: -15px;
   width: 100%;
   height: 300px;
-  background: url(../images/vespa.png) no-repeat 0 0;
+  background: url(../images/flying_vespa.png) no-repeat 0 0;
+}
+
+#flying_vespa_reverse {
+  z-index: 25;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 250px;
+  background: url(../images/flying_vespa_reverse.png) no-repeat 0 0;
 }
 
 #news {
@@ -328,7 +345,7 @@ ul.social {
   position: absolute;
   left: -80px;
   top: 20px;
-  background: #222;
+  background: rgba(0,0,0,0.85);
   color: #fff;
   padding: 15px;
   border-radius: 4px 0 0 4px;

@@ -11,7 +11,13 @@ $(function() {
   $(window).scroll(function() {
     var top = $(document.body).scrollTop();
     var offset = (top - 1230) * 1.5;
-    $("#flying_vespa").css("background-position", offset + 13 + "px 0");
+    $("#flying_vespa").css(
+      "background-position", offset + 13 + "px 0"
+    );
+    var reverseOffset = (3100 - top) * 1.5;
+    $("#flying_vespa_reverse").css(
+      "background-position", reverseOffset + "px 0"
+    );
   });
 
   $("#nav a").click(function(event) {
@@ -33,24 +39,26 @@ $(function() {
       var href = $(this).attr("href");
       var $target = $(href);
       var scrollTop = $(document.body).scrollTop();
-      var sectionTop = $target.offset().top;
-      if (scrollTop >= sectionTop) {
-        $("#nav li").removeClass("active");
-        $(this).closest("li").addClass("active");
-        $(".page").removeClass("active");
-        $target.addClass("active");
+      if ($target.length > 0) {
+        var sectionTop = $target.offset().top;
+        if (scrollTop >= sectionTop) {
+          $("#nav li").removeClass("active");
+          $(this).closest("li").addClass("active");
+          $(".page").removeClass("active");
+          $target.addClass("active");
+        }
       }
     });
   });
 
   // Twitter
-  // $("#tweets").tweet({
-  //   username: "vespaspiets",
-  //   join_text: "",
-  //   avatar: false,
-  //   count: 2,
-  //   loading_text: "loading tweets..."
-  // });
+  $("#tweets").tweet({
+    username: "vespaspiets",
+    join_text: "",
+    avatar: false,
+    count: 2,
+    loading_text: "loading tweets..."
+  });
 
   // YouTube Videos
   var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&orderby=published&callback=?';
