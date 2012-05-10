@@ -6,24 +6,32 @@
     <h1>
       Jaunumi
     </h1>
+    <div class="poster">
+      <img src="images/poster.jpg" />
+    </div>
+    <a id="sign_up" href="https://docs.google.com/spreadsheet/viewform?formkey=dHVzN0R6OXo1SE5uV2htaS1jOU5aWkE6MQ" target="_blank">
+      <img src="images/sign_up.png" alt="Es būšu!" />
+    </a>
+    <!--
     <div id="news_articles_container">
     <div id="news_articles">
       <% @feed.each do |entry| %>
-        <% title, *message_paragraphs = entry["message"].split("\n") %>
+        <% title, *message_paragraphs = entry["message"].to_s.split("\n") %>
         <% message_paragraphs = message_paragraphs.select { |p| p.strip != "" } %>
         <% created_time = Time.parse(entry["created_time"]) %>
+        <% url = entry["link"] || (entry["actions"] && entry["actions"][0] && entry["actions"][0]["link"]) %>
         <div class="article">
           <div class="date">
             <span class="day"><%= created_time.day %></span>
             <span class="month"><%= created_time.strftime("%b") %></span>
           </div>
           <% if entry["picture"] %>
-            <a href="<%= entry["link"] %>" target="_blank">
+            <a href="<%= url %>" target="_blank">
               <img src="<%= entry["picture"] %>" style="float: right" />
             </a>
           <% end %>
           <h3>
-            <a href="<%= entry["link"] %>" target="_blank">
+            <a href="<%= url %>" target="_blank">
               <%= title %>
               <span class="more">...</span>
             </a>
@@ -35,6 +43,7 @@
       </a>
     </div>
     </div>
+    -->
     <div id="tweets" data-stellar-ratio="0">
     </div>
     <div id="news_chuvaak" data-stellar-background-ratio="0.35">

@@ -304,6 +304,43 @@ ul.social {
   line-height: 1.0;
 }
 
+#news .poster {
+  padding: 10px;
+  background: #f8f8f8 url(../images/noise.png);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  margin: 0px 0 20px 0;
+  position: relative;
+  display: inline-block;
+  width: 510px;
+}
+#news .poster img {
+  border-radius: 2px;
+  display: block;
+}
+
+@-webkit-keyframes infinite-spinning {
+     0% { -webkit-transform: rotate(-20deg); }
+    50% { -webkit-transform: rotate( 20deg); }
+   100% { -webkit-transform: rotate(-20deg); }
+}
+@-moz-keyframes infinite-spinning {
+     0% { -moz-transform: rotate(-20deg); }
+    50% { -moz-transform: rotate( 20deg); }
+   100% { -moz-transform: rotate(-20deg); }
+}
+#sign_up {
+  display: block;
+  position: absolute;
+  top: 180px;
+  left: -100px;
+  overflow: hidden;
+/*  -webkit-animation: infinite-spinning 4s infinite;
+  -moz-animation: infinite-spinning 4s infinite;
+*/
+}
+
+
 .article {
   padding: 10px 20px;
   background: #f8f8f8 url(../images/noise.png);
