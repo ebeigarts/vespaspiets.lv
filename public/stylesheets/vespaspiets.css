@@ -70,7 +70,6 @@ h1 {
 .logo_black { background-image: url(../images/logo_black.png); }
 .logo_white { background-image: url(../images/logo_white.png); }
 
-
 ul.social {
   display: block;
   position: absolute;
@@ -97,6 +96,7 @@ ul.social {
 #header #nav ul.social li.social_draugiem a span { background-image: url(../images/social_draugiem.png); width: 29px; }
 #header #nav ul.social li.social_facebook a span { background-image: url(../images/social_facebook.png); width: 29px; }
 #header #nav ul.social li.social_twitter  a span { background-image: url(../images/social_twitter.png);  width: 34px; }
+#header #nav ul.social li.social_email    a span { background-image: url(../images/social_email.png);    width: 24px; }
 
 #header #nav ul.social li a:hover span.inactive { top: -24px; }
 #header #nav ul.social li a:hover span.active   { top: -24px; }
