@@ -8,3 +8,4 @@ gem "koala", '~> 1.4.1'
 
 gem "shotgun"
 gem "racksh"
+gem "heroku"
