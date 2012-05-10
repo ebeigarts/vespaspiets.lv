@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.2.8)
+    dalli (2.0.5)
     faraday (0.7.6)
       addressable (~> 2.2)
       multipart-post (~> 1.1)
@@ -67,6 +68,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dalli
   foreman
   heroku
   koala (~> 1.4.1)
