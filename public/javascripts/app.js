@@ -10,11 +10,13 @@ $(function() {
 
   $(window).scroll(function() {
     var top = $(document.body).scrollTop();
-    var offset = (top - 1230) * 1.5;
+    var pageOffset = $("#news").offset().top + $("#news").height();
+    var offset = (top - pageOffset) * 1.5;
     $("#flying_vespa").css(
       "background-position", offset + 13 + "px 0"
     );
-    var reverseOffset = (3100 - top) * 1.5;
+    var pageOffset = $("#video").offset().top + $("#video").height();
+    var reverseOffset = (pageOffset - top) * 1.5;
     $("#flying_vespa_reverse").css(
       "background-position", reverseOffset + "px 0"
     );

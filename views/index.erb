@@ -6,47 +6,50 @@
     <h1>
       Jaunumi
     </h1>
+    <!--
     <div class="poster">
       <img src="images/poster.jpg" />
     </div>
     <a id="sign_up" href="https://docs.google.com/spreadsheet/viewform?formkey=dHVzN0R6OXo1SE5uV2htaS1jOU5aWkE6MQ" target="_blank">
       <img src="images/sign_up.png" alt="Es būšu!" />
     </a>
-    <!--
+    -->
     <div id="news_articles_container">
     <div id="news_articles">
-      <% @feed.each do |entry| %>
-        <% title, *message_paragraphs = entry["message"].to_s.split("\n") %>
-        <% message_paragraphs = message_paragraphs.select { |p| p.strip != "" } %>
-        <% created_time = Time.parse(entry["created_time"]) %>
-        <% url = entry["link"] || (entry["actions"] && entry["actions"][0] && entry["actions"][0]["link"]) %>
+      <% @feed.entries.first(3).each do |entry| %>
         <div class="article">
           <div class="date">
-            <span class="day"><%= created_time.day %></span>
-            <span class="month"><%= created_time.strftime("%b") %></span>
+            <span class="day"><%= entry.published.day %></span>
+            <span class="month"><%= entry.published.strftime("%b") %></span>
           </div>
-          <% if entry["picture"] %>
-            <a href="<%= url %>" target="_blank">
-              <img src="<%= entry["picture"] %>" style="float: right" />
+          <% if /src="(?<img_url>[^"]+)"/ =~ entry.content %>
+            <a href="<%= entry.url %>" target="_blank">
+              <img src="<%= img_url %>" style="float: right; width: 160px" />
             </a>
           <% end %>
           <h3>
-            <a href="<%= url %>" target="_blank">
-              <%= title %>
-              <span class="more">...</span>
+            <a href="<%= entry.url %>" target="_blank">
+              <%= entry.title %>
             </a>
           </h3>
+          <p>
+            <%= Sanitize.clean(entry.summary.to_s.gsub("&#160;", " ").gsub("\u00A0", " ").strip) %>
+          </p>
+          <p>
+            <a href="<%= entry.url %>" class="more">
+              Lasīt tālāk ...
+            </a>
+          </p>
         </div>
       <% end %>
-      <a href="http://www.facebook.com/pages/Vespa-spiets/107178829336751" class="more_more">
+      <a href="http://vespaspiets.wordpress.com/" class="more_more">
         ...
       </a>
     </div>
     </div>
-    -->
     <div id="tweets" data-stellar-ratio="0">
     </div>
-    <div id="news_chuvaak" data-stellar-background-ratio="0.35">
+    <div id="news_chuvaak">
     </div>
   </div>
   <div id="flying_vespa">

@@ -1,6 +1,7 @@
 require 'sinatra'
-require 'koala'
 require 'dalli'
+require 'feedzirra'
+require 'sanitize'
 
 module VespaSpiets
   class App < Sinatra::Base
@@ -11,17 +12,7 @@ module VespaSpiets
     # set :session_secret, "1389hgfw781239dasf"
 
     get "/" do
-      # @feed = settings.cache.fetch("feed", :expires_in => 60) do
-      #   @oauth = Koala::Facebook::OAuth.new(348126495249042, "a26aa29841f5f43b5c32cb663184c966")
-      #   @access_token = @oauth.get_app_access_token
-      #   @access_token = "348126495249042|57jpAVi0NRRcOBq4eSdGH8luzCk"
-      #   @graph = Koala::Facebook::API.new(@access_token)
-      #   @graph.get_connections("107178829336751", "feed").select do |entry|
-      #     # entry["type"] == "photo" #&& !entry.key?("application")
-      #     true
-      #   end #.first(3)
-      # end
-      @feed = []
+      @feed = Feedzirra::Feed.fetch_and_parse("http://vespaspiets.wordpress.com/feed/")
       erb :index
     end
   end

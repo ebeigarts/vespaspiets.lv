@@ -207,9 +207,9 @@ ul.social {
 }
 
 #news_chuvaak {
-  background: url(../images/news_chuvaak.png) no-repeat 50% 1100px fixed;
+  background: url(../images/news_chuvaak.png) no-repeat 50% 420px fixed;
   width: 350px;
-  height: 1120px;
+  height: 1500px;
   position: absolute;
   right: 0;
   top: 0px;
@@ -270,6 +270,7 @@ ul.social {
 
 #news {
   background-image: url(../images/news_bg.jpg);
+  height: 1500px;
 }
 #albums {
   background-image: url(../images/albums_bg.jpg);
@@ -366,10 +367,10 @@ ul.social {
 }
 
 .article h3 {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 300;
   margin: 10px 0;
-  line-height: 1.0;
+  line-height: 1.2;
   font-weight: normal;
   letter-spacing: -0.04em;
 }
