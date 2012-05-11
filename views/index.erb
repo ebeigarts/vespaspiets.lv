@@ -36,7 +36,7 @@
             <%= Sanitize.clean(entry.summary.to_s.gsub("&#160;", " ").gsub("\u00A0", " ").strip) %>
           </p>
           <p>
-            <a href="<%= entry.url %>" class="more">
+            <a href="<%= entry.url %>" target="_blank" class="more">
               Lasīt tālāk ...
             </a>
           </p>
