@@ -367,6 +367,7 @@ ul.social {
 .modal .article img {
   margin: 0;
   max-width: 100%;
+  height: auto;
 }
 
 #news_articles .article {
