@@ -11,9 +11,23 @@ module VespaSpiets
     # set :sessions, true
     # set :session_secret, "1389hgfw781239dasf"
 
+    before do
+      @feed = settings.cache.fetch("feed", 60) do
+        Feedzirra::Feed.fetch_and_parse("http://vespaspiets.wordpress.com/feed/")
+      end
+    end
+
     get "/" do
-      @feed = Feedzirra::Feed.fetch_and_parse("http://vespaspiets.wordpress.com/feed/")
       erb :index
+    end
+
+    get %r{^/blog/(.*)$} do |url|
+      @entry = @feed.entries.detect { |e| e.url.include?(url) }
+      if @entry
+        erb :post, :layout => false
+      else
+        halt 404
+      end
     end
   end
 end

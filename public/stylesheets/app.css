@@ -272,6 +272,10 @@ ul.social {
   background-image: url(../images/news_bg.jpg);
   height: 1500px;
 }
+#news .logo {
+  height: 1500px;
+}
+
 #albums {
   background-image: url(../images/albums_bg.jpg);
 }
@@ -355,6 +359,14 @@ ul.social {
   position: relative;
   display: inline-block;
   width: 510px;
+}
+.modal .article {
+  margin: 0;
+  border-radius: 0;
+}
+.modal .article img {
+  margin: 0;
+  max-width: 100%;
 }
 
 #news_articles .article {
@@ -480,4 +492,36 @@ ul.social {
 .video img {
   display: block;
   
+}
+
+
+/*** MODAL ***/
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  overflow: auto;
+}
+.modal button.close {
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 7px 12px;
+}
+.modal .modal-body {
+  margin: 0 auto;
+  width: 960px;
+  min-height: 100%;
+  padding-left: 15px;
 }

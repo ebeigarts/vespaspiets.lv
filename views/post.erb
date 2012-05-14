@@ -1,0 +1,14 @@
+<div class="article">
+  <div class="date">
+    <span class="day"><%= @entry.published.day %></span>
+    <span class="month"><%= @entry.published.strftime("%b") %></span>
+  </div>
+  <h3>
+    <a href="<%= @entry.url %>" target="_blank">
+      <%= @entry.title %>
+    </a>
+  </h3>
+  <p>
+    <%= @entry.content.to_s.gsub("&#160;", " ").gsub("\u00A0", " ").strip %>
+  </p>
+</div>

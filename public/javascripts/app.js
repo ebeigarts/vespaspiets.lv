@@ -8,6 +8,7 @@ $(function() {
     });
   }
 
+
   $(window).scroll(function() {
     var top = $(document.body).scrollTop();
     var pageOffset = $("#news").offset().top + $("#news").height();
@@ -51,6 +52,36 @@ $(function() {
         }
       }
     });
+  });
+
+  // Modals
+  $(".modal .close").click(function() {
+    $(this).closest(".modal").hide();
+    $(document.body).css({ overflow: "auto" });
+  });
+  $(".modal").click(function(event) {
+    if (this == event.target) {
+      $(this).closest(".modal").hide();
+      $(document.body).css({ overflow: "auto" });
+    }
+  })
+  $(document.body).keydown(function(event) {
+    if (event.which == 27) {
+      $(".modal").hide();
+      $(document.body).css({ overflow: "auto" });
+    }
+  })
+
+  // News modal
+  $("div.article a").click(function(event) {
+    event.preventDefault();
+    var url = "/blog" + $(this).attr("href").substr(32);
+    console.log(url);
+    $.get(url, function(data) {
+      $(document.body).css({ overflow: "hidden" });
+      $("#news_modal").show();
+      $("#news_modal .modal-body").html(data);
+    })
   });
 
   // Twitter
