@@ -1,13 +1,9 @@
 $(function() {
-  // Stellar doesn't work with IE
-  if (!$.browser.msie) {
-    $.stellar({
-      horizontalScrolling: false,
-      verticalOffset: 0,
-      horizontalOffset: 0
-    });
-  }
-
+  $.stellar({
+    horizontalScrolling: false,
+    verticalOffset: 0,
+    horizontalOffset: 0
+  });
 
   $(window).scroll(function() {
     var top = $(document).scrollTop();

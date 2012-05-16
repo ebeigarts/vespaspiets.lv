@@ -311,7 +311,10 @@
 
 			$backgroundElements.each(function(){
 				var $this = $(this),
-					backgroundPosition = $this.css('background-position').split(' '),
+					backgroundPosition = [
+						$this.css('backgroundPositionX'),
+						$this.css('backgroundPositionY')
+					],
 					horizontalOffset,
 					verticalOffset,
 					positionLeft,
