@@ -10,7 +10,7 @@ $(function() {
 
 
   $(window).scroll(function() {
-    var top = $(document.body).scrollTop();
+    var top = $(document).scrollTop();
     var pageOffset = $("#news").offset().top + $("#news").height();
     var offset = (top - pageOffset) * 1.5;
     $("#flying_vespa").css(
