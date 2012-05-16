@@ -333,9 +333,10 @@ ul.social {
 #sign_up {
   display: block;
   position: absolute;
-  top: 180px;
-  left: -100px;
+  top: 200px;
+  left: 440px;
   overflow: hidden;
+  z-index: 9999;
 /*  -webkit-animation: infinite-spinning 4s infinite;
   -moz-animation: infinite-spinning 4s infinite;
 */
