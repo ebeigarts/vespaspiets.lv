@@ -190,7 +190,8 @@ ul.social {
   border-radius: 4px;
   margin-bottom: -1px;
   overflow: hidden;
-  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 8px rgba(0,0,0,0.2);
+  -moz-box-shadow: none;
 }
 #tweets li {
   padding: 10px;
@@ -320,16 +321,6 @@ ul.social {
   display: block;
 }
 
-@-webkit-keyframes infinite-spinning {
-     0% { -webkit-transform: rotate(-20deg); }
-    50% { -webkit-transform: rotate( 20deg); }
-   100% { -webkit-transform: rotate(-20deg); }
-}
-@-moz-keyframes infinite-spinning {
-     0% { -moz-transform: rotate(-20deg); }
-    50% { -moz-transform: rotate( 20deg); }
-   100% { -moz-transform: rotate(-20deg); }
-}
 #sign_up {
   display: block;
   position: absolute;
@@ -337,16 +328,14 @@ ul.social {
   left: 440px;
   overflow: hidden;
   z-index: 9999;
-/*  -webkit-animation: infinite-spinning 4s infinite;
-  -moz-animation: infinite-spinning 4s infinite;
-*/
 }
 
 
 .article {
   padding: 10px 20px;
   background: #f8f8f8 url(../images/noise.png);
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  -moz-box-shadow: none;
   border-radius: 4px;
   margin: 0px 0 20px 0;
   position: relative;
@@ -427,7 +416,7 @@ ul.social {
   background: #fff;
   margin: 0 0px 10px 0;
   padding: 10px;
-  box-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+  box-shadow: 2px 2px 8px #000;
 }
 .album a:hover {
   background: rgba(255,255,255,0.9);
