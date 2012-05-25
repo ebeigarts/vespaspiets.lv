@@ -311,10 +311,7 @@
 
 			$backgroundElements.each(function(){
 				var $this = $(this),
-					backgroundPosition = [
-						$this.css('backgroundPositionX'),
-						$this.css('backgroundPositionY')
-					],
+					backgroundPosition,
 					horizontalOffset,
 					verticalOffset,
 					positionLeft,
@@ -328,6 +325,15 @@
 					parentOffsetTop = 0,
 					tempParentOffsetLeft = 0,
 					tempParentOffsetTop = 0;
+
+        if ($.browser.msie) {
+          backgroundPosition = [
+            $this.css('backgroundPositionX'),
+            $this.css('backgroundPositionY')
+          ];
+        } else {
+          backgroundPosition = $this.css('background-position').split(' ');
+        }
 
 				// Ensure this element isn't already part of another scrolling element
 				if (!$this.data('stellar-backgroundIsActive')) {

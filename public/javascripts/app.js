@@ -1,4 +1,5 @@
 $(function() {
+
   $.stellar({
     horizontalScrolling: false,
     verticalOffset: 0,
@@ -17,6 +18,12 @@ $(function() {
     $("#flying_vespa_reverse").css(
       "background-position", reverseOffset + "px 0"
     );
+    // Toggle tweets
+    if (top > 600) {
+      $("#tweets").hide(200);
+    } else {
+      $("#tweets").show();
+    }
   });
 
   $("#nav a").click(function(event) {
@@ -72,7 +79,7 @@ $(function() {
   $("div.article a").click(function(event) {
     event.preventDefault();
     var url = "/blog" + $(this).attr("href").substr(32);
-    console.log(url);
+    // console.log(url);
     $.get(url, function(data) {
       $(document.body).css({ overflow: "hidden" });
       $("#news_modal").show();

@@ -166,11 +166,12 @@ ul.social {
 }
 
 #tweets {
-  position: absolute;
+  position: fixed;
   top: 160px;
-  right: 50px;
+/*  right: 50px;*/
   width: 250px;
   z-index: 20;
+  padding-left: 660px;
 }
 #tweets:before {
   content: "";
@@ -295,6 +296,7 @@ ul.social {
   width: 650px;
   position: relative;
   left: -80px;
+  z-index: 30;
 }
 #news_articles {
 /*  overflow-y: scroll;*/
