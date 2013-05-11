@@ -311,6 +311,31 @@ ul.social {
   line-height: 1.0;
 }
 
+#news .poster {
+  padding: 10px;
+  background: #f8f8f8 url(../images/noise.png);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  margin: 0px 0 20px 0;
+  position: relative;
+  display: inline-block;
+  width: 510px;
+}
+#news .poster img {
+  border-radius: 2px;
+  display: block;
+}
+
+#sign_up {
+  display: block;
+  position: absolute;
+  top: 200px;
+  left: 440px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+
 .article {
   padding: 10px 20px;
   background: #f8f8f8 url(../images/noise.png);
