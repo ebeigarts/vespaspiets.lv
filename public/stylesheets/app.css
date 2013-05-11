@@ -329,7 +329,7 @@ ul.social {
 #sign_up {
   display: block;
   position: absolute;
-  top: 200px;
+  top: 0px;
   left: 440px;
   overflow: hidden;
   z-index: 9999;
