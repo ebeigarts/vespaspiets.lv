@@ -97,7 +97,7 @@ $(function() {
   });
 
   // YouTube Videos
-  var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&orderby=published&callback=?';
+  var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&callback=?';
 
   $("[data-video-id]").live("click", function() {
     var videoID = $(this).data("video-id");
