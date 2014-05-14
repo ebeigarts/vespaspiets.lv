@@ -87,15 +87,6 @@ $(function() {
     })
   });
 
-  // Twitter
-  $("#tweets").tweet({
-    username: "vespaspiets",
-    join_text: "",
-    avatar: false,
-    count: 2,
-    loading_text: "loading tweets..."
-  });
-
   // YouTube Videos
   var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&callback=?';
 

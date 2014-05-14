@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'dalli'
-require 'feedzirra'
+require 'feedjira'
 require 'sanitize'
 
 module VespaSpiets
@@ -13,7 +13,7 @@ module VespaSpiets
 
     before do
       @feed = settings.cache.fetch("feed", 60) do
-        Feedzirra::Feed.fetch_and_parse("http://vespaspiets.wordpress.com/feed/")
+        Feedjira::Feed.fetch_and_parse("http://vespaspiets.wordpress.com/feed/")
       end
     end
 
