@@ -122,17 +122,20 @@ $(function() {
   // Facebook photo albums
   var facebookAlbumsURL = "http://graph.facebook.com/107178829336751/albums?callback=?";
   $.getJSON(facebookAlbumsURL, function(data) {
-    $.each(data.data, function(i, album) {
+    var i = 0
+    $.each(data.data, function(_, album) {
       var facebookPhotosUrl = "http://graph.facebook.com/" + album.id + "/photos?callback=?";
-      if (album.name != "Cover Photos" &&
+      if (i < 8 &&
+          album.name != "Cover Photos" &&
           album.name != "Profile Pictures" &&
           album.name != "Wall Photos")
       {
+        i++;
         $.getJSON(facebookPhotosUrl, function(data) {
           if (data.data.length > 1) {
-            $.each(data.data, function(i, photo) {
+            $.each(data.data, function(j, photo) {
               // if (photo.id == album.cover_photo) {
-              if (i == 0) {
+              if (j == 0) {
                 $("#albums_container").append(
                   "<div class='album'>" +
                     "<a href='"+ album.link +"' target='_blank'>" +

@@ -411,7 +411,7 @@ ul.social {
 }
 
 #albums_container {
-  width: 560px;
+  width: 660px;
 }
 .album {
   display: inline-block;
@@ -442,6 +442,8 @@ ul.social {
 .album:nth-child(4) { -webkit-transform: rotate(2deg);   -moz-transform: rotate(2deg);   }
 .album:nth-child(5) { -webkit-transform: rotate(-14deg); -moz-transform: rotate(-14deg); }
 .album:nth-child(6) { -webkit-transform: rotate(7deg);   -moz-transform: rotate(7deg);   }
+.album:nth-child(7) { -webkit-transform: rotate(-4deg);  -moz-transform: rotate(-4deg);   }
+.album:nth-child(8) { -webkit-transform: rotate(12deg);  -moz-transform: rotate(12deg);   }
 .album img {
   display: block;
 }
