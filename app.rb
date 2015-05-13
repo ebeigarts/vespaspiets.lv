@@ -13,7 +13,7 @@ module VespaSpiets
 
     before do
       @feed = settings.cache.fetch("feed", 60) do
-        Feedjira::Feed.fetch_and_parse("http://vespaspiets.wordpress.com/feed/")
+        Feedjira::Feed.fetch_and_parse("https://vespaspiets.wordpress.com/feed/")
       end
     end
 

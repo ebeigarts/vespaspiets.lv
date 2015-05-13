@@ -88,7 +88,7 @@ $(function() {
   });
 
   // YouTube Videos
-  var videoUploadsURL = 'http://gdata.youtube.com/feeds/base/users/Vespaspiets/uploads?alt=json&v=2&callback=?';
+  var videoUploadsURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=UUGIApmoE-9wom126BQJ7-XA&key=AIzaSyDQExlwG6QLs4FN7knNbXT2OvxbHTYjHRQ&callback=?';
 
   $("[data-video-id]").live("click", function() {
     var videoID = $(this).data("video-id");
@@ -100,19 +100,17 @@ $(function() {
     );
   });
   $.getJSON(videoUploadsURL, function(data) {
-    var items = data.feed.entry;
-    $.each(data.feed.entry, function(i, item) {
+    var items = data.items;
+    $.each(items, function(i, item) {
       var item = items[i];
-      var feedTitle = item.title.$t;
-      var feedURL = item.link[1].href;
-      var fragments = feedURL.split("/");
-      var videoID = fragments[fragments.length - 1].replace("?v=2", "");
-      var thumbURL = "http://img.youtube.com/vi/"+ videoID +"/default.jpg";
-      // console.log(feedTitle);
+      var title = item.snippet.title;
+      var videoID = item.contentDetails.videoId;
+      var thumbURL = item.snippet.thumbnails.default.url;
+      // console.log(title);
       $("#video_container").append(
         "<div class='video' data-video-id='" + videoID + "'>" +
           "<img src='" + thumbURL + "' width='104' />" +
-          "<span class='video_title'>" + feedTitle + "</span>" +
+          "<span class='video_title'>" + title + "</span>" +
         "</div>"
       );
     });
