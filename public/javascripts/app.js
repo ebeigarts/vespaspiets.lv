@@ -78,7 +78,9 @@ $(function() {
   // News modal
   $("div.article a").click(function(event) {
     event.preventDefault();
-    var url = "/blog" + $(this).attr("href").substr(32);
+    var parts = $(this).attr("href").split("/")
+    var permalink = parts[parts.length - 2];
+    var url = "/blog/" + permalink;
     // console.log(url);
     $.get(url, function(data) {
       $(document.body).css({ overflow: "hidden" });
