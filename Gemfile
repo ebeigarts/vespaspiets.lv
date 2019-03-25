@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby '2.1.10'
+
 gem "rack"
 gem "sinatra"
 # gem "omniauth-facebook"
@@ -12,4 +14,3 @@ gem "dalli"
 gem "foreman"
 gem "shotgun"
 gem "racksh"
-gem "heroku"

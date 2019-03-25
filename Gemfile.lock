@@ -1,11 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.6)
     curb (0.8.5)
     dalli (2.7.1)
     dotenv (0.7.0)
-    excon (0.33.0)
     feedjira (1.2.0)
       curb (~> 0.8.1)
       loofah (~> 1.2.1)
@@ -13,25 +11,9 @@ GEM
     foreman (0.67.0)
       dotenv (~> 0.7.0)
       thor (~> 0.17.0)
-    heroku (3.7.3)
-      heroku-api (~> 0.3.17)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rqrcode (~> 0.4.2)
-      rubyzip
-      term-ansicolor (~> 1.3.0)
-    heroku-api (0.3.18)
-      excon (~> 0.27)
-      multi_json (~> 1.8)
-    launchy (2.4.2)
-      addressable (~> 2.3)
     loofah (1.2.1)
       nokogiri (>= 1.4.4)
-    mime-types (2.2)
     mini_portile (0.6.0)
-    multi_json (1.10.0)
-    netrc (0.7.7)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     rack (1.5.2)
@@ -42,10 +24,6 @@ GEM
     racksh (1.0.0)
       rack (>= 1.0)
       rack-test (>= 0.5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    rqrcode (0.4.2)
-    rubyzip (1.1.3)
     sanitize (2.1.0)
       nokogiri (>= 1.4.4)
     sax-machine (0.2.1)
@@ -56,11 +34,8 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    term-ansicolor (1.3.0)
-      tins (~> 1.0)
     thor (0.17.0)
     tilt (1.4.1)
-    tins (1.3.0)
 
 PLATFORMS
   ruby
@@ -69,9 +44,14 @@ DEPENDENCIES
   dalli
   feedjira
   foreman
-  heroku
   rack
   racksh
   sanitize
   shotgun
   sinatra
+
+RUBY VERSION
+   ruby 2.1.10p492
+
+BUNDLED WITH
+   1.17.3

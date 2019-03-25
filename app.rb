@@ -18,7 +18,11 @@ module VespaSpiets
     end
 
     get "/" do
-      erb :index
+      if request.host == "www.vespaclub.lv"
+        redirect "http://www.vespaspiets.lv/"
+      else
+        erb :index
+      end
     end
 
     get %r{^/blog/(.*)$} do |url|
