@@ -47,8 +47,9 @@ module VespaSpiets
       end
       content_type :json
       albums.
-        reject { |a| a[:name] == "Profila attēli" }.
-        reject { |a| a[:name] == "Titulbildes" }.
+        reject { |a| a[:name] == "Profile Pictures" }.
+        reject { |a| a[:name] == "Timeline Photos" }.
+        reject { |a| a[:name] == "Mobile Uploads" }.
         to_json
     end
 
