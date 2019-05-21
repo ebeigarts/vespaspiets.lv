@@ -120,35 +120,16 @@ $(function() {
   });
 
   // Facebook photo albums
-  var facebookAlbumsURL = "http://graph.facebook.com/107178829336751/albums?callback=?";
-  $.getJSON(facebookAlbumsURL, function(data) {
-    var i = 0
-    $.each(data.data, function(_, album) {
-      var facebookPhotosUrl = "http://graph.facebook.com/" + album.id + "/photos?callback=?";
-      if (i < 8 &&
-          album.name != "Cover Photos" &&
-          album.name != "Profile Pictures" &&
-          album.name != "Wall Photos")
-      {
-        i++;
-        $.getJSON(facebookPhotosUrl, function(data) {
-          if (data.data.length > 1) {
-            $.each(data.data, function(j, photo) {
-              // if (photo.id == album.cover_photo) {
-              if (j == 0) {
-                $("#albums_container").append(
-                  "<div class='album'>" +
-                    "<a href='"+ album.link +"' target='_blank'>" +
-                      "<img src='"+ photo.picture +"' />" +
-                      "<span class='album_title''>"+ album.name +"</span>" +
-                    "</a>" +
-                  "</div>"
-                );
-              }
-            });
-          }
-        });
-      }
+  $.get("/albums.json", function(data) {
+    $.each(data, function(j, album) {
+      $("#albums_container").append(
+        "<div class='album'>" +
+          "<a href='"+ album.url +"' target='_blank'>" +
+            "<img src='"+ album.image_url +"' />" +
+            "<span class='album_title'>"+ album.name +"</span>" +
+          "</a>" +
+        "</div>"
+      );
     });
   });
 });
