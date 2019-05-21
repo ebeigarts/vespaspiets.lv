@@ -50,6 +50,7 @@ module VespaSpiets
         reject { |a| a[:name] == "Profile Pictures" }.
         reject { |a| a[:name] == "Timeline Photos" }.
         reject { |a| a[:name] == "Mobile Uploads" }.
+        reject { |a| a[:name] == "Cover Photos" }.
         to_json
     end
 
